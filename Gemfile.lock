@@ -9,10 +9,8 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
-    fastercsv (1.5.5)
     ffi (1.9.23)
     forwardable-extended (2.6.0)
-    htmlentities (4.3.4)
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -31,10 +29,6 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.9.3)
       jekyll (~> 3.3)
-    jekyll-import (0.14.0)
-      fastercsv
-      jekyll (>= 1.4)
-      nokogiri
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-seo-tag (2.5.0)
@@ -48,14 +42,10 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
     mercenary (0.3.6)
-    mini_portile2 (2.3.0)
     minima (2.5.0)
       jekyll (~> 3.5)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
-    mysql2 (0.5.1)
-    nokogiri (1.8.2)
-      mini_portile2 (~> 2.3.0)
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.2)
@@ -70,22 +60,15 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    sequel (5.9.0)
-    unidecode (1.0.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  htmlentities
   jekyll (~> 3.8.2)
   jekyll-feed (~> 0.6)
-  jekyll-import
   minima (~> 2.0)
-  mysql2
-  sequel
   tzinfo-data
-  unidecode
 
 BUNDLED WITH
    1.16.2
