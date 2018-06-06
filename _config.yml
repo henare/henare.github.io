@@ -24,6 +24,8 @@ permalink: /blog/:year/:month/:day/:title/
 # Build settings
 markdown: kramdown
 theme: minima
+header_pages:
+  - # Intentionally left blank to remove all items
 plugins:
   - jekyll-feed
 feed:
