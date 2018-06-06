@@ -1,0 +1,33 @@
+---
+layout: post
+status: publish
+published: true
+title: Subscribing to Apple iCal Server feeds from Mozilla Sunbird
+author:
+  display_name: henare
+  login: henare
+  email: henare.degan@gmail.com
+  url: http://www.henaredegan.com/
+author_login: henare
+author_url: http://www.henaredegan.com/
+wordpress_id: 207
+wordpress_url: http://www.henaredegan.com/blog/?p=207
+date: '2010-04-12 14:06:49 +1000'
+date_gmt: '2010-04-12 04:06:49 +1000'
+categories:
+- Geekery
+tags:
+- apple
+- sunbird
+- ical
+- icalserver
+- mozilla
+- caldav
+- calendar
+comments: []
+---
+<p>Subscribing to feeds from <a href="http://www.apple.com/server/macosx/features/ical-server.html">Apple's iCal Server</a> with OS X's iCal may be a relatively straight-forward affair but working out what CalDAV address to use with <a href="http://www.mozilla.org/projects/calendar/sunbird/">Mozilla Sunbird</a> is another story completely.</p>
+<p>It took me ages to work out where these magic feed addresses were but once you know, it's trivial. In iCal, just select the calendar you want to subscribe and select File, Get Info:</p>
+<p><a href="http://www.henaredegan.com/blog/wp-content/uploads/2010/04/ical_moreinfo.png"><img class="size-medium wp-image-210 alignnone" title="ical_moreinfo" src="http://www.henaredegan.com/blog/wp-content/uploads/2010/04/ical_moreinfo-300x175.png" alt="" width="300" height="175" /></a></p>
+<p>Enter your server address and port, eg. <code inline="true">http://yourserversaddress:8008/</code>, then put the CalDAV URL in the image above into the Sunbird CalDAV subscription wizard and you're good to go:</p>
+<p><a href="http://www.henaredegan.com/blog/wp-content/uploads/2010/04/sunbird_newcalendar.png"><img class="size-medium wp-image-211 alignnone" title="sunbird_newcalendar" src="http://www.henaredegan.com/blog/wp-content/uploads/2010/04/sunbird_newcalendar-300x240.png" alt="" width="300" height="240" /></a></p>

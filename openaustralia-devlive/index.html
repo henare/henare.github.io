@@ -1,0 +1,76 @@
+---
+layout: page
+status: publish
+published: true
+title: OpenAustralia DevLive
+author:
+  display_name: henare
+  login: henare
+  email: henare.degan@gmail.com
+  url: http://www.henaredegan.com/
+author_login: henare
+author_url: http://www.henaredegan.com/
+wordpress_id: 143
+wordpress_url: http://www.henaredegan.com/blog/?page_id=143
+date: '2010-01-20 17:57:29 +1100'
+date_gmt: '2010-01-20 07:57:29 +1100'
+categories:
+- Uncategorized
+tags: []
+comments:
+- id: 61
+  author: henaredegan.com &raquo; Blog Archive &raquo; OpenAustralia DevLive, now
+    with PlanningAlerts goodness
+  author_url: http://www.henaredegan.com/blog/2010/04/09/openaustralia-devlive-now-with-planningalerts-goodness/
+  date: '2010-04-09 11:22:27 +1000'
+  date_gmt: '2010-04-09 01:22:27 +1000'
+  content: "[...] OpenAustralia DevLive [...]"
+- id: 149
+  author: henaredegan.com &raquo; Blog Archive &raquo; OpenAustralia DevLive now available
+    in SUSE Gallery
+  author_url: http://www.henaredegan.com/blog/2010/06/25/openaustralia-devlive-now-available-in-suse-gallery/
+  date: '2010-06-25 11:07:57 +1000'
+  date_gmt: '2010-06-25 01:07:57 +1000'
+  content: "[...] OpenAustralia DevLive [...]"
+- id: 96558
+  author: Luke Hayes
+  author_url: http://gamifydemocracy.com
+  date: '2015-09-10 16:26:57 +1000'
+  date_gmt: '2015-09-10 06:26:57 +1000'
+  content: "Hello, \r\nI wish to find collaborators for one of my projects, \"Gamify
+    Democracy\" where my goal is to facilitate quantifiable, verifiable moral reputations
+    for political discourse, parties, politicians and the citizenry of Australia while
+    increasing participation and common sense. There is a description on gamifydemocracy.com
+    in video and text.\r\nSincerely\r\nLuke Hayes"
+---
+<p><img class="alignright size-full wp-image-18" title="logo" src="http://www.henaredegan.com/blog/wp-content/uploads/2009/08/logo.png" alt="logo" width="238" height="61" />OpenAustralia DevLive is a prebuilt development appliance that allows you to download a ready-to-run <a href="http://www.openaustralia.org/">OpenAustralia.org</a> and <a href="http://www.planningalerts.org.au">PlanningAlerts</a> development server. No server setup, no dependencies, no worries - just download and start hacking.</p>
+<p>It is built using <a href="http://susestudio.com/">SUSE Studio</a> and openSUSE 11.1.</p>
+<h2>Downloads</h2>
+<p>The appliance is available as a VMWare appliance (that can be run using the free <a href="http://www.virtualbox.org/">VirtualBox software</a> or the no cost <a href="http://www.vmware.com/products/player/">VMWare Player</a>).</p>
+<p>A big thank you to <a href="http://www.communitybuilders.com.au/">Community Builders</a> for hosting the <a href="http://oa.communitybuilders.com.au/">appliance download</a>.</p>
+<h2>Settings</h2>
+<p>Some important settings you'll need:</p>
+<ul>
+<li>User <em>user</em> auto logs in to a desktop. Just fire up Firefox to see the dev sites</li>
+<li>Unix users <em>root</em> and <em>user</em> - password <em>oa</em></li>
+<li>MySQL - databases</li>
+<ul>
+<li>OpenAustralia: <em>openaustralia</em>, user <em>openaustralia</em>, password <em>openaustralia</em></li>
+<li>PlanningAlerts: <em>planningalerts</em>, user <em>planningalerts</em>, password <em>planningalerts</em></li>
+</ul>
+<li>To enable search, as root, run: <em>/srv/www/openaustralia/twfy/search/index.pl openaustralia daterange 2007-09-19 2007-09-21</em></li>
+</ul>
+<h3>Bug reports and feature requests</h3>
+<p>Please feel free to leave bug reports and feature requests in the comments.</p>
+<h2>How-to</h2>
+<p>To find out how the original OpenAustralia.org DevLive was created, check out the <a href="http://www.henaredegan.com/blog/2009/08/06/introducing-openaustralia-devlive/">blog post</a>.</p>
+<h2>Git Repository</h2>
+<p>All of the files used to create OpenAustralia DevLive are <a href="http://github.com/henare/oa-devlive">hosted in a GitHub repository</a> so you can now build your own if you'd like.</p>
+<h3>Change Log</h3>
+<p>0.1.0 - Added PlanningAlerts.org.au</p>
+<p>0.0.6 - Alpha version adding PlanningAlerts.org.au</p>
+<p>0.0.5 - Make the <tt>twfy</tt> directory a Git repo that can <tt>git pull</tt> from updates from the Github repo</p>
+<p>0.0.4 - Enable searching on the OpenAustralia dev site</p>
+<p>0.0.3 - Added git, added Open VM Tools (removed Perl-Error due to a conflict). Firefox bookmarks and start page changed</p>
+<p>0.0.2 - Added data to DB</p>
+<p>0.0.1 - First alpha release. Basic web app running</p>

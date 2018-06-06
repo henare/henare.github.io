@@ -1,0 +1,36 @@
+---
+layout: post
+status: publish
+published: true
+title: Monitor Apache 2.2 with Zenoss on Debian
+author:
+  display_name: henare
+  login: henare
+  email: henare.degan@gmail.com
+  url: http://www.henaredegan.com/
+author_login: henare
+author_url: http://www.henaredegan.com/
+wordpress_id: 157
+wordpress_url: http://www.henaredegan.com/blog/?p=157
+date: '2010-03-12 15:32:41 +1100'
+date_gmt: '2010-03-12 05:32:41 +1100'
+categories:
+- Geekery
+tags:
+- apache
+- zenoss
+- debian
+- monitoring
+comments:
+- id: 163
+  author: Motin
+  author_url: http://motin.eu
+  date: '2010-07-11 03:00:00 +1000'
+  date_gmt: '2010-07-10 17:00:00 +1000'
+  content: "Thanks man, works great!\r\n\r\nHopefully there is a trac ticket on this
+    so that they get this fixed in 3.0\r\n\r\nCheers!"
+---
+<p>The packaged Zenoss for Debain will monitor httpd out of the box but does not look for the apache2 process.</p>
+<p>To monitor Apache 2.2, you need to add a similar Processes class as httpd has. Navigate to <em>Processes>Apache</em> and then select <em>Add process</em>. Type <code inline="true">apache2</code> as an ID (it's just a unique identifier) and select OK.</p>
+<p>Under the Edit tab, type <code inline="true">apache2</code> for the Name and <code inline="true">^.*\/*apache2</code> as the RegEx. That should be all you need.</p>
+<p>To start monitoring a device, just remodel it manually or wait for a day or so for remodelling to happen on all your devices for Apache 2.2 to start to be monitored.</p>

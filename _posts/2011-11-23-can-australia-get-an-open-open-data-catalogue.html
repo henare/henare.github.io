@@ -1,0 +1,112 @@
+---
+layout: post
+status: publish
+published: true
+title: Can Australia get an open Open Data Catalogue?
+author:
+  display_name: henare
+  login: henare
+  email: henare.degan@gmail.com
+  url: http://www.henaredegan.com/
+author_login: henare
+author_url: http://www.henaredegan.com/
+wordpress_id: 463
+wordpress_url: http://www.henaredegan.com/blog/?p=463
+date: '2011-11-23 13:49:35 +1100'
+date_gmt: '2011-11-23 02:49:35 +1100'
+categories:
+- OpenAustralia
+tags:
+- open data
+- datastore
+- catalogue
+- government
+- council
+- development applications
+- open source
+- ckan
+- open data catalogue
+- api
+- brisbane
+comments:
+- id: 1295
+  author: Peter Timmins
+  author_url: http://www.foi-privacy.blogspot.com
+  date: '2011-12-06 09:52:21 +1100'
+  date_gmt: '2011-12-05 22:52:21 +1100'
+  content: "Thought you might be interested in this. Australika still a long way behind...
+    \r\nhttp://blog.law.cornell.edu/voxpop/2011/12/05/opengovernment-org-researching-u-s-state-legislation/"
+- id: 1299
+  author: henare
+  author_url: http://www.henaredegan.com/
+  date: '2011-12-06 14:58:25 +1100'
+  date_gmt: '2011-12-06 03:58:25 +1100'
+  content: "Very much so - thanks Peter.\r\n\r\nInteresting article. Of course the
+    US has its own problems, \"<i>approval of the U.S. Congress down to 9% &mdash;
+    lower than, yes, communism, the British Petroleum company during the oil spill,
+    and King George III at the time of the American Revolution.</i>\". Ouch.\r\n\r\nThanks
+    again for posting the article."
+- id: 1557
+  author: Craig
+  author_url: ''
+  date: '2012-03-19 07:10:32 +1100'
+  date_gmt: '2012-03-18 20:10:32 +1100'
+  content: "Hi Henare,\r\n\r\nConsidering that by default data in data catalogues
+    are open for reuse, why not build a community site that includes the data, plus
+    rates it for openness (using Berner-Lee's measures), includes crowd sourced data
+    transformation (where data is released in problematic 'open' formats such as PDF)
+    and a common API for any data?\r\n\r\nThis could include community dialogue tools
+    for discussion and registering interest per datasets to help people find each
+    other and share ideas for reuse and data visualisation tools built on some of
+    those available in the open source community.\r\n\r\nThis would go far beyond
+    the government's efforts and open the door to asking governments for money to
+    operate it on a not-for-profit basis.\r\n\r\nI would be very happy to be involved
+    on the funding sourcing, system concept, design &amp; operations - but are not
+    a developer."
+- id: 1558
+  author: henare
+  author_url: http://www.henaredegan.com/
+  date: '2012-03-19 08:54:43 +1100'
+  date_gmt: '2012-03-18 21:54:43 +1100'
+  content: "Hey Craig,\r\n\r\nThanks for the response! Yes, this is exactly what I
+    was suggesting in my post - set up a community site that pulls in data from the
+    all the existing data catalogues and enhances it.\r\n\r\nI really like your idea
+    about rating data for openness. In fact one of the open source systems I suggested
+    we use, CKAN, already has an extension for this - <a href=\"https://github.com/okfn/ckanext-qa#readme\"
+    rel=\"nofollow\">CKAN Quality Assurance Extension</a>.\r\n\r\nIt wouldn't take
+    a lot of effort to get something like this off the ground. I was being serious
+    when I suggested someone take it on for International Open Data Day last year
+    :)\r\n\r\nMaybe we should look at this together for the next OpenAustralia Hackfest?
+    I'd be happy to get the site set up and then the bulk of the work would be importing
+    the datasets, running the site and promoting it.\r\n\r\nGiven the <a href=\"http://www.theregister.co.uk/2012/03/01/oz_gov_2_losing_momentum/\"
+    rel=\"nofollow\">recent coverage</a> of what's happening with data.gov.au - do
+    you know of anyone else that might be interested in a project like this? If so
+    we might be able to get it off the ground sooner rather than later.\r\n\r\nCheers,
+    Henare"
+- id: 1765
+  author: Craig
+  author_url: ''
+  date: '2012-10-10 19:39:10 +1100'
+  date_gmt: '2012-10-10 08:39:10 +1100'
+  content: "Sorry for late reply - not many people are active in this space in Australia,
+    so sorry no :(\r\n\r\nPia is best bet - but she's working with ACT gov on their
+    data portal (socrata base)."
+---
+<p>I read over at <a href="http://egovau.blogspot.com/2011/11/brisbane-city-council-launches-open.html">Craig Thomler's eGov AU blog</a> that Brisbane City Council has launched <a href="http://data.brisbane.qld.gov.au/">their own open data catalogue site</a>. <strong>Great news</strong>, right? <strong>Not entirely</strong>.</p>
+<p>Unfortunately it appears to be yet another Australian site <strong>reinventing the open-data-catalogue-wheel</strong>. So far we have:</p>
+<ul>
+<li><a href="http://data.gov.au">data.gov.au</a>: custom Wordpress site</li>
+<li><a href="http://data.brisbane.qld.gov.au">data.brisbane.qld.gov.au</a>: custom Wordpress site</li>
+<li><a href="http://data.nsw.gov.au">data.nsw.gov.au</a>: custom PHP (Drupal?) site</li>
+<li><a href="http://data.mosman.nsw.gov.au">data.mosman.nsw.gov.au</a>: custom proprietary site</li>
+<li><a href="http://data.vic.gov.au">data.vic.gov.au</a>: custom proprietary site</li>
+</ul>
+<h2>Open Source Data Catalogues</h2>
+<p>How come none are using and contributing to an open source data catalogue like <a href="http://ckan.org/">CKAN</a> or <a href="https://github.com/azavea/Open-Data-Catalog">Open Data Catalog</a>? These projects are <strong>so much more advanced</strong> than the sites that have been deployed in Australia and it's no wonder - CKAN's maturity is because it has been <strong>developed for over four years</strong>.</p>
+<p>Not only that but using an open source open data catalogue simply means it's <strong>cheaper for Australian governments</strong> to provide these services. If data.gov.au had used and contributed to an open source data catalogue we'd probably have had the vast majority of Australian local customisations done (if any were needed) and subsequent catalogues by Victoria, NSW and now councils would <strong>border on trivial to set up and deploy</strong>.</p>
+<h2>Doing It Right</h2>
+<p>The open source catalogues I mention above also <strong>get some key things right</strong> that Australian sites deployed so far don't - namely <a href="http://www.opendataphilly.org/opendata/nominate/">open and public data requests</a> and <a href="http://data.gov.uk/blog/announcing-datagovuk-catalogue-apis#list-of-api-calls">an API</a> (oh the irony of open data catalogues not having <del>a good</del> any API!).</p>
+<p>Open and public requests are critical and would <strong>highlight the lacklustre data released</strong> to date in Australia. The Brisbane catalogue mentioned above is a prime example, there's a <a href="http://www.planningalerts.org.au/authorities/brisbane/applications">clear and demonstrable need</a> for <strong>development application data to be opened and freed</strong> but it hasn't been chosen as one of the items to be included in the data that launched with the site. If there was a way for data developers to <strong>make public requests</strong> and not a <a href="http://data.brisbane.qld.gov.au/index.php/suggest-a-dataset/">glorified contact form</a> we might see this data opened at some stage. As it stands, and while there's a scraper gathering the data that simply ignores the <a href="http://pdonline.brisbane.qld.gov.au/masterview/masterplan/enquirer/default.aspx?page=disclaimer">onerous conditions</a>, I doubt we'll see this.</p>
+<h2>How do we fix it?</h2>
+<p>However there's no point in moaning without suggesting a way to fix things. One way the open data community in Australia could promote the use more advanced open source data catalogues would be to <strong>simply set up our own one</strong>. A system like CKAN can slurp in data from all of the existing catalogues, thereby providing a <strong>comprehensive centralised source of all Australian open data</strong> (not just one level of government and not just community projects like OpenAustralia). This would also <strong>provide an API to that data</strong> and a central place where everyone can <strong>log requests for open data</strong> and track what data is <strong>really in demand</strong> by open data hackers in Australia.</p>
+<p><em>Maybe someone should take this on as a project for <a href="http://www.opendataday.org/">#odhd</a>?</em> ;)</p>

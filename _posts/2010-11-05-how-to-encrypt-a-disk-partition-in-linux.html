@@ -1,0 +1,56 @@
+---
+layout: post
+status: publish
+published: true
+title: How to encrypt a disk partition in Linux
+author:
+  display_name: henare
+  login: henare
+  email: henare.degan@gmail.com
+  url: http://www.henaredegan.com/
+author_login: henare
+author_url: http://www.henaredegan.com/
+wordpress_id: 360
+wordpress_url: http://www.henaredegan.com/blog/?p=360
+date: '2010-11-05 08:59:12 +1100'
+date_gmt: '2010-11-04 22:59:12 +1100'
+categories:
+- Geekery
+tags:
+- howto
+- debian
+- ubuntu
+- luks
+- encryption
+- disk
+- cryptsetup
+comments: []
+---
+<p><img class="alignright size-full wp-image-361" title="luks-logo-cropped" src="http://www.henaredegan.com/blog/wp-content/uploads/2010/11/luks-logo-cropped.png" alt="" width="330" height="112" /><br />
+<a href="https://code.google.com/p/cryptsetup/">LUKS</a> is the standard for Linux hard disk encryption. The following few commands are all you need to encrypt your next external hard disk or USB key on a Debian-based distribution like Ubuntu.</p>
+<h2>Installation</h2>
+<p>Install the required software and load the module into the running kernel without restarting:</p>
+<p>[cc lang="bash"]<br />
+sudo aptitude install cryptsetup<br />
+sudo modprobe dm_crypt<br />
+[/cc]</p>
+<h2>Drive creation</h2>
+<p>Set up encryption on the disk and mount it:</p>
+<p>[cc lang="bash"]<br />
+sudo cryptsetup luksFormat /dev/sdb1<br />
+sudo cryptsetup luksOpen /dev/sdb1 external<br />
+sudo mkfs.ext4 /dev/mapper/external<br />
+sudo mount /dev/mapper/external /mnt<br />
+[/cc]</p>
+<h2>Mounting</h2>
+<p>How to mount the drive:</p>
+<p>[cc lang="bash"]<br />
+sudo cryptsetup luksOpen /dev/sdb1 external<br />
+sudo mount /dev/mapper/external /mnt<br />
+[/cc]</p>
+<h2>Unmounting</h2>
+<p>How to unmount the drive:</p>
+<p>[cc lang="bash"]<br />
+sudo umount /mnt<br />
+sudo cryptsetup luksClose external<br />
+[/cc]</p>

@@ -1,0 +1,64 @@
+---
+layout: post
+status: publish
+published: true
+title: 'Failed experiment: A Twitter bot for Sydney Airport'
+author:
+  display_name: henare
+  login: henare
+  email: henare.degan@gmail.com
+  url: http://www.henaredegan.com/
+author_login: henare
+author_url: http://www.henaredegan.com/
+wordpress_id: 410
+wordpress_url: http://www.henaredegan.com/blog/?p=410
+date: '2011-06-21 15:08:46 +1000'
+date_gmt: '2011-06-21 05:08:46 +1000'
+categories:
+- Hacking
+tags:
+- ruby
+- scraping
+- fail
+- failure
+- twitter
+- bot
+comments:
+- id: 873
+  author: erietta
+  author_url: http://www.eriontheinterweb.com
+  date: '2011-07-08 12:41:44 +1000'
+  date_gmt: '2011-07-08 02:41:44 +1000'
+  content: Wow, if we could have a schedule of flight path nasties overlayed with
+    our TV guide and anticipate when we would miss that crucial dialogue ... now that
+    would be something!
+- id: 875
+  author: henare
+  author_url: ''
+  date: '2011-07-08 12:52:28 +1000'
+  date_gmt: '2011-07-08 02:52:28 +1000'
+  content: Ha, I'll register marrickvillepause.com right now! :)
+- id: 925
+  author: Silona
+  author_url: ''
+  date: '2011-08-06 01:40:09 +1000'
+  date_gmt: '2011-08-05 15:40:09 +1000'
+  content: have you seen flightaware.com they have some interesting feeds...
+- id: 926
+  author: henare
+  author_url: http://www.henaredegan.com/
+  date: '2011-08-07 09:43:01 +1000'
+  date_gmt: '2011-08-06 23:43:01 +1000'
+  content: Thanks Silona, I hadn't seen that site. They have heaps of information.
+---
+<p>Yesterday I noticed <a href="http://infovore.org/archives/2011/06/12/wheres-towerbridge/">the kerfuffle</a> about the <a href="http://infovore.org/archives/2008/02/28/making-bridges-talk/">UK's Tower Bridge Twitter account</a>. It's a bot that tweets when the <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Tower_Bridge">Tower Bridge in London</a> opens and closes.</p>
+<p>In the author's announcement of the bot he said,</p>
+<blockquote><p>The idea of overhearing machines talking about what they&rsquo;re doing is, to my mind, quite delightful.</p></blockquote>
+<p>and I tend to agree.</p>
+<p>So I thought I'd look at setting something up locally. I live close to the flight path so while I was pondering this a plane flew over and I thought I'd set up a bot for the Sydney Airport.</p>
+<p>They have listings of arrivals and departures so <a href="https://github.com/henare/SYDap">I hacked together a bot</a> and this was the result:</p>
+<p><a href="http://www.henaredegan.com/blog/wp-content/uploads/2011/06/sydap.png"><img class="aligncenter size-full wp-image-411" title="SYDap" src="http://www.henaredegan.com/blog/wp-content/uploads/2011/06/sydap.png" alt="" width="553" height="561" /></a></p>
+<p><strong>So why is this a failed experiment?</strong> Well after running it for a time I realised that the source data, scraped from the arrivals and departures page of the Sydney Airport site, didn't really match what I was trying to do with it.</p>
+<p>The data is focused on providing information to passengers, not an accurate picture of what really is coming and going from the airport.</p>
+<p><strong>The lesson?</strong> Data can't always be hacked to suit other purposes and if it's the foundation of a project, as it so often is, then spend the time ensuring it matches up with what you're trying to do.</p>
+<p>That said, I don't consider this a waste of time. Failure's part of the process.</p>

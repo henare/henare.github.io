@@ -1,0 +1,39 @@
+---
+layout: post
+status: publish
+published: true
+title: SUSE Studio - Customising the Browser
+author:
+  display_name: henare
+  login: henare
+  email: henare.degan@gmail.com
+  url: http://www.henaredegan.com/
+author_login: henare
+author_url: http://www.henaredegan.com/
+wordpress_id: 28
+wordpress_url: http://www.henaredegan.com/blog/?p=28
+date: '2009-08-07 14:48:04 +1000'
+date_gmt: '2009-08-07 04:48:04 +1000'
+categories:
+- Geekery
+tags:
+- linux
+- susestudio
+- howto
+comments:
+- id: 2
+  author: henare
+  author_url: ''
+  date: '2009-08-10 13:01:55 +1000'
+  date_gmt: '2009-08-10 03:01:56 +1000'
+  content: It occured to me that if the Firefox package was updated on a deployed
+    appliance, newly created users would get the default openSUSE start page. I guess
+    the lesson here is that the 'correct' way would be to create a custom package
+    and build that into the appliance.
+---
+<p>For OpenAustralia DevLive, I wanted the browser to open straight into the local machine's development instance of the web application. I also wanted to provide a bunch of project related links as bookmarks to make it easy for users to get help or submit bugs.</p>
+<p>To change the browser start page you need to add an overlay file called <em>browserconfig.properties</em> in the <em>/usr/lib/firefox</em> directory (<em>/usr/lib64/firefox</em> with 64 bit Firefox), with the following contents:</p>
+<pre>browser.startup.homepage=http://dev.openaustralia.org/
+browser.startup.homepage_reset=http://dev.openaustralia.org/</pre>
+<p>To customise the default bookmarks, export a <em>bookmarks.html</em> file from Firefox and upload it as an overlay in the <em>/usr/lib/firefox/defaults/profile</em> directory.</p>
+<p>Both these files normally have the permissions <em>root:root 644</em>.</p>

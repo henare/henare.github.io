@@ -1,0 +1,45 @@
+---
+layout: post
+status: publish
+published: true
+title: Moving Confluence to Solaris under VMWare
+author:
+  display_name: henare
+  login: henare
+  email: henare.degan@gmail.com
+  url: http://www.henaredegan.com/
+author_login: henare
+author_url: http://www.henaredegan.com/
+wordpress_id: 96
+wordpress_url: http://www.henaredegan.com/blog/?p=96
+date: '2009-09-10 17:50:15 +1000'
+date_gmt: '2009-09-10 07:50:15 +1000'
+categories:
+- Geekery
+tags:
+- linux
+- solaris
+- confluence
+- wiki
+- vmware
+- virtualisation
+comments:
+- id: 19
+  author: Patrick
+  author_url: http://wiki.bsdserver.nl
+  date: '2009-09-26 10:23:53 +1000'
+  date_gmt: '2009-09-26 00:23:53 +1000'
+  content: "Dude, if you like the GNU tools have a peek in /usr/sfw/bin.\r\nYou will
+    find most of the tools in there ready to be used.\r\n\r\nCheers,\r\nPatrick"
+---
+<p>As a proof of concept, yesterday I moved our Confluence installation to Solaris under VMWare from it's current home on a Linux box. I won't go into the background as to why I was doing this (most people would be shocked hearing I would move anything <i>from</i> Linux!) but the reason it was a proof of concept was the fact that <a href="http://jira.atlassian.com/browse/CONF-11301">Confluence isn't officially supported under VMWare</a>.</p>
+<p>A few points:</p>
+<ul>
+<li>There are lots of Solaris things I don't like after coming from Linux. Packaging first, and the tools it ships with (I want <i>GNU</i> grep and tar, dammit!)</li>
+<li>To allow an unprivileged user (our confluence user in this case) to bind to privileged ports (i.e. TCP < 1024), run this as root with the user logged out <code inline="true">usermod -K defaultpriv=basic,net_privaddr confluence</code></li>
+<li>Use <code inline="true">prstat</code>, not <code inline="true">top</code> on Solaris</li>
+<li>When Atlassian says don't use Solaris' version of <code inline="true">tar</code>, they mean it. I spent about half an hour debugging only to find that Solaris had untarred the file incorrectly. Grrr.</li>
+<li>I love open formats and the *nix way. I did a <code inline="true">mysqldump</code> from our old server and found that our DB tables were using the MyISAM engine (not recommended by Atlassian), so I switched to InnoDB by a simple, quick <code inline="true">sed</code> through the dump. Brilliant. I love it.</li>
+<li>To stress test the application after the move <a href="http://www.joedog.org/index/siege-home">I used siege</a>, which worked a treat. It's probably packaged for your Linux distro too</li>
+</ul>
+<p>Confluence seems to be running fine on the new VM and withstood my siege, it's only small (50 MB) so that might be a factor but it's worth testing if you need to make this move yourself.</p>
