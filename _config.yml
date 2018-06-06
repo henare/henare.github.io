@@ -27,6 +27,7 @@ permalink: /blog/:year/:month/:day/:title/
 theme: minima
 header_pages:
   - # Intentionally left blank to remove all items
+google_analytics: UA-9966931-1
 
 # Plugins
 plugins:
