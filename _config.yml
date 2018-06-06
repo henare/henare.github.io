@@ -16,8 +16,6 @@
 title: Henare Degan
 description: >- # this means to ignore newlines until "baseurl:"
   Civic hacker
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: henaredegan
 github_username:  henare
 permalink: /blog/:year/:month/:day/:title/
