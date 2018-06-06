@@ -19,13 +19,16 @@ description: >- # this means to ignore newlines until "baseurl:"
 twitter_username: henaredegan
 github_username:  henare
 
-permalink: /blog/:year/:month/:day/:title/
-
 # Build settings
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Theme
 theme: minima
 header_pages:
   - # Intentionally left blank to remove all items
+
+# Plugins
 plugins:
   - jekyll-feed
 feed:
