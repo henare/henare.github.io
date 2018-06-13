@@ -26,7 +26,7 @@ permalink: /blog/:year/:month/:day/:title/
 # Theme
 theme: minima
 header_pages:
-  - # Intentionally left blank to remove all items
+  - blog/index.md
 google_analytics: UA-9966931-1
 
 # Plugins
