@@ -36,7 +36,7 @@ comments:
 <p>A few points:</p>
 <ul>
 <li>There are lots of Solaris things I don't like after coming from Linux. Packaging first, and the tools it ships with (I want <i>GNU</i> grep and tar, dammit!)</li>
-<li>To allow an unprivileged user (our confluence user in this case) to bind to privileged ports (i.e. TCP < 1024), run this as root with the user logged out <code inline="true">usermod -K defaultpriv=basic,net_privaddr confluence</code></li>
+<li>To allow an unprivileged user (our confluence user in this case) to bind to privileged ports (i.e. TCP &lt; 1024), run this as root with the user logged out <code inline="true">usermod -K defaultpriv=basic,net_privaddr confluence</code></li>
 <li>Use <code inline="true">prstat</code>, not <code inline="true">top</code> on Solaris</li>
 <li>When Atlassian says don't use Solaris' version of <code inline="true">tar</code>, they mean it. I spent about half an hour debugging only to find that Solaris had untarred the file incorrectly. Grrr.</li>
 <li>I love open formats and the *nix way. I did a <code inline="true">mysqldump</code> from our old server and found that our DB tables were using the MyISAM engine (not recommended by Atlassian), so I switched to InnoDB by a simple, quick <code inline="true">sed</code> through the dump. Brilliant. I love it.</li>
