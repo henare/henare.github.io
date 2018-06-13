@@ -9,7 +9,8 @@ task :test do
     disable_external: true,
     empty_alt_ignore: true,
     check_html: true,
-    check_img_http: true
+    check_img_http: true,
+    check_opengraph: true
   }
   HTMLProofer.check_directory("./_site", options).run
 end
