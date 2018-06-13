@@ -26,7 +26,10 @@ permalink: /blog/:year/:month/:day/:title/
 # Theme
 theme: minima
 header_pages:
-  - blog/index.md
+  - blog/index.html
+show_excerpts: true
+paginate: 5
+paginate_path: "/blog/page/:num/"
 google_analytics: UA-9966931-1
 
 # Plugins
