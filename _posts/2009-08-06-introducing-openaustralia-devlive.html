@@ -30,7 +30,7 @@ comments:
   content: "[...] new version of OpenAustralia DevLive is now available. Version 0.0.4
     adds search functionality so you can test and hack on search [...]"
 ---
-<p><img class="alignright size-full wp-image-18" title="logo" src="http://www.henaredegan.com/blog/wp-content/uploads/2009/08/logo.png" alt="logo" width="238" height="61" />OpenAustralia DevLive is a prebuilt development appliance that allows you to download a ready-to-run <a href="http://www.openaustralia.org/">OpenAustralia</a> development server. No server setup, no dependencies, no worries - just download and start hacking.</p>
+<p><img class="alignright size-full wp-image-18" title="logo" src="/blog/wp-content/uploads/2009/08/logo.png" alt="logo" width="238" height="61" />OpenAustralia DevLive is a prebuilt development appliance that allows you to download a ready-to-run <a href="http://www.openaustralia.org/">OpenAustralia</a> development server. No server setup, no dependencies, no worries - just download and start hacking.</p>
 <p>It is built using <a href="http://susestudio.com/">SUSE Studio</a> and openSUSE 11.1.</p>
 <h2>Downloads</h2>
 <p>The appliance is available in two formats, as a VMWare appliance (that can be run using the free <a href="http://www.virtualbox.org/">VirtualBox software</a> or the no cost <a href="http://www.vmware.com/products/player/">VMWare Player</a>) or a live CD. At this stage only a full desktop version is available, although it will be trivial to build a headless server-only appliance if demand warrants it.</p>
@@ -50,12 +50,12 @@ comments:
 </ul>
 <p>Most of these are dependencies listed in the <a href="http://software.openaustralia.org/">OpenAustralia install instructions</a>.</p>
 <p>After the Software comes the Configuration tab of SUSE Studio:</p>
-<p>[caption id="attachment_11" align="alignnone" width="475" caption="SUSE Studio Configuration tab"]<img class="size-full wp-image-11" title="studio_config" src="http://www.henaredegan.com/blog/wp-content/uploads/2009/08/studio_config.png" alt="SUSE Studio Configuration Tab" width="475" height="364" />[/caption]</p>
+<p>[caption id="attachment_11" align="alignnone" width="475" caption="SUSE Studio Configuration tab"]<img class="size-full wp-image-11" title="studio_config" src="/blog/wp-content/uploads/2009/08/studio_config.png" alt="SUSE Studio Configuration Tab" width="475" height="364" />[/caption]</p>
 <p>Beyond the basics that need configuration in this screen, I exported a copy of the OpenAustralia database schema and uploaded it using the Server tab. I also found that the Apache server was not configured to start automatically so I added a line to the post-build Scripts tab:<br />
 <code>chkconfig -s apache2 235</code><br />
 to have the server start at runlevels 2, 3 and 5. I did this as chkconfig creates symlinks and the overlay files feature of SUSE Studio doesn't create these (more on that now).</p>
 <p>The Overlay Files tab is where things start to get interesting, from here you can upload files that get overlaid on the filesystem of our appliance. This is how the OpenAustralia files get created in /srv/www/openaustralia, for example. For this appliance there are a bunch of custom files:</p>
-<p>[caption id="attachment_14" align="alignnone" width="472" caption="SUSE Studio Overlay Files tab"]<img class="size-full wp-image-14" title="studio_overlay" src="http://www.henaredegan.com/blog/wp-content/uploads/2009/08/studio_overlay.png" alt="SUSE Studio Overlay Files tab" width="472" height="265" />[/caption]</p>
+<p>[caption id="attachment_14" align="alignnone" width="472" caption="SUSE Studio Overlay Files tab"]<img class="size-full wp-image-14" title="studio_overlay" src="/blog/wp-content/uploads/2009/08/studio_overlay.png" alt="SUSE Studio Overlay Files tab" width="472" height="265" />[/caption]</p>
 <ul>
 <li>/etc/hosts - points dev.openaustralia.org to the local machine so you can use Firefox to look at the dev site</li>
 <li>/etc/php5/apache2/php.ini - set short_open_tag = On</li>

@@ -1,0 +1,14 @@
+diff --git a/gsa-original b/gsa-smb
+index ba1c66f..73751ab 100644
+--- a/gsa-original
++++ b/gsa-smb
+@@ -2680,8 +2680,7 @@ for (var j = 1; j &lt; p.length; j++) { url += "&amp;" + p[j]; }}
+         </xsl:when>
+ 	<!-- *** URI for smb or NFS must be escaped because it appears in the URI query *** -->
+         <xsl:when test="$protocol='nfs' or $protocol='smb'">
+-	  <xsl:value-of disable-output-escaping='yes'
+-	                select="concat($protocol,'/',$temp_url)"/>
++	  <xsl:value-of disable-output-escaping='yes' select="concat('file://', substring-after(U, '://'))"/>
+         </xsl:when>
+         <xsl:when test="$protocol='unc'">
+           <xsl:value-of disable-output-escaping='yes' select="concat('file://', $display_url2)"/>
