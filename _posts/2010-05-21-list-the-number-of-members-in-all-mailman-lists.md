@@ -29,13 +29,15 @@ comments:
   content: 'I just realised that if the Mailman binaries are in your $PATH then you
     can remove the ''./''es in the script and it should work from anywhere. #duh'
 ---
-<p>Here's a little bash script to display the name of all lists in your mailman site and the number of subscribers for each list, just run it in the same directory as your mailman binaries ([cci]/usr/lib/mailman/bin[/cci] on Debian):</p>
-<p><code lang="bash"><br />
-#!/bin/bash<br />
-LISTS=$((`./list_lists | wc -l` - 1))<br />
-LISTS=`./list_lists | tail -n$LISTS | awk '{ print $1 }'`<br />
-for i in $LISTS; do<br />
-    echo $i `./list_members $i | wc -l`<br />
-done<br />
-</code></p>
-<p>Protip: you can also just copy and paste the lines into your terminal so you don't have to save it as a script.</p>
+Here's a little bash script to display the name of all lists in your mailman site and the number of subscribers for each list, just run it in the same directory as your mailman binaries (`/usr/lib/mailman/bin` on Debian):
+
+```bash
+#!/bin/bash
+LISTS=$((`./list_lists | wc -l` - 1))
+LISTS=`./list_lists | tail -n$LISTS | awk '{ print $1 }'`
+for i in $LISTS; do
+    echo $i `./list_members $i | wc -l`
+done
+```
+
+Protip: you can also just copy and paste the lines into your terminal so you don't have to save it as a script.

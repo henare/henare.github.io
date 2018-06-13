@@ -63,10 +63,18 @@ comments:
     I can definitely advocate the value of reducing functionality.\r\n\r\nCongrats
     on a successful migration!"
 ---
-<p><a href="/blog/wp-content/uploads/2011/07/wordpress-logo.png"><img src="/blog/wp-content/uploads/2011/07/wordpress-logo.png" alt="" title="Wordpress logo" width="150" height="150" class="alignright size-full wp-image-426" /></a>About seven years ago I bet on the wrong horse. I chose <a href="http://phpwebsite.appstate.edu/">phpWebSite</a> as the CMS to run a site for a community group I'm a part of.</p>
-<p>Why the wrong horse? Well seven years ago <a href="http://wordpress.org/">Wordpress</a> wasn't in the game but I do remember evaluating <a href="http://drupal.org/">Drupal</a> and whilst it has a vibrant, active community the same cannot be said for phpWebSite.</p>
-<p>I wanted to give our site a visual refresh, make it easier for people to contribute and to move to a more secure platform than the out of date version of phpWebSite we were running on. The obvious choice was Wordpress.</p>
-<p>I've looked before for tools to migrate from phpWebSite to Wordpress but never found anything so I decided to write a tool myself. As I was getting started writing a tool, the friend I was working on the migration with discovered a <a href="https://wordpress.org/extend/plugins/csv-importer/">CSV importer plugin</a> already written for Wordpress so we decided to see how hard it would be to export data from phpWebSite as CSV that this plugin could understand.</p>
-<p>As we didn't have huge amounts of content it turned out to be much easier to export the Announcement posts as CSV using <a href="http://www.phpmyadmin.net/">phpMyAdmin</a> and manually recreate everything else (just a handful of comments and some image galleries).</p>
-<p>The trick with exporting the Announcement posts was to use the <em>CSV for MS Excel</em> option of phpMyAdmin and then manipulate the data using <a href="http://www.libreoffice.org/features/calc/">LibreOffice Calc</a> into the format expected by the CSV Importer plugin.</p>
-<p>Since we only had a handful of comments I simply recreated these using the standard Wordpress UI and manually set the dates to match phpWebSite. Photos are stored under [cci]images/<module name>/[/cci] so I just copied the [cci]images/photoalbum[/cci] directory and uploaded all the images in each gallery using the usual Wordpress uploader.</p>
+<a href="/blog/wp-content/uploads/2011/07/wordpress-logo.png"><img src="/blog/wp-content/uploads/2011/07/wordpress-logo.png" alt="" title="Wordpress logo" width="150" height="150" class="alignright size-full wp-image-426" /></a>
+
+About seven years ago I bet on the wrong horse. I chose <a href="http://phpwebsite.appstate.edu/">phpWebSite</a> as the CMS to run a site for a community group I'm a part of.
+
+Why the wrong horse? Well seven years ago <a href="http://wordpress.org/">Wordpress</a> wasn't in the game but I do remember evaluating <a href="http://drupal.org/">Drupal</a> and whilst it has a vibrant, active community the same cannot be said for phpWebSite.
+
+I wanted to give our site a visual refresh, make it easier for people to contribute and to move to a more secure platform than the out of date version of phpWebSite we were running on. The obvious choice was Wordpress.
+
+I've looked before for tools to migrate from phpWebSite to Wordpress but never found anything so I decided to write a tool myself. As I was getting started writing a tool, the friend I was working on the migration with discovered a <a href="https://wordpress.org/extend/plugins/csv-importer/">CSV importer plugin</a> already written for Wordpress so we decided to see how hard it would be to export data from phpWebSite as CSV that this plugin could understand.
+
+As we didn't have huge amounts of content it turned out to be much easier to export the Announcement posts as CSV using <a href="http://www.phpmyadmin.net/">phpMyAdmin</a> and manually recreate everything else (just a handful of comments and some image galleries).
+
+The trick with exporting the Announcement posts was to use the _CSV for MS Excel_ option of phpMyAdmin and then manipulate the data using <a href="http://www.libreoffice.org/features/calc/">LibreOffice Calc</a> into the format expected by the CSV Importer plugin.
+
+Since we only had a handful of comments I simply recreated these using the standard Wordpress UI and manually set the dates to match phpWebSite. Photos are stored under `images/<module name>/` so I just copied the `images/photoalbum` directory and uploaded all the images in each gallery using the usual Wordpress uploader.
