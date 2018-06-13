@@ -50,12 +50,12 @@ comments:
 </ul>
 <p>Most of these are dependencies listed in the <a href="http://software.openaustralia.org/">OpenAustralia install instructions</a>.</p>
 <p>After the Software comes the Configuration tab of SUSE Studio:</p>
-<p>[caption id="attachment_11" align="alignnone" width="475" caption="SUSE Studio Configuration tab"]<img class="size-full wp-image-11" title="studio_config" src="/blog/wp-content/uploads/2009/08/studio_config.png" alt="SUSE Studio Configuration Tab" width="475" height="364" />[/caption]</p>
+<p><figure><img class="size-full wp-image-11" title="studio_config" src="/blog/wp-content/uploads/2009/08/studio_config.png" alt="SUSE Studio Configuration Tab" width="475" height="364" /><figcaption>SUSE Studio Configuration tab</figcaption></figure></p>
 <p>Beyond the basics that need configuration in this screen, I exported a copy of the OpenAustralia database schema and uploaded it using the Server tab. I also found that the Apache server was not configured to start automatically so I added a line to the post-build Scripts tab:<br />
 <code>chkconfig -s apache2 235</code><br />
 to have the server start at runlevels 2, 3 and 5. I did this as chkconfig creates symlinks and the overlay files feature of SUSE Studio doesn't create these (more on that now).</p>
 <p>The Overlay Files tab is where things start to get interesting, from here you can upload files that get overlaid on the filesystem of our appliance. This is how the OpenAustralia files get created in /srv/www/openaustralia, for example. For this appliance there are a bunch of custom files:</p>
-<p>[caption id="attachment_14" align="alignnone" width="472" caption="SUSE Studio Overlay Files tab"]<img class="size-full wp-image-14" title="studio_overlay" src="/blog/wp-content/uploads/2009/08/studio_overlay.png" alt="SUSE Studio Overlay Files tab" width="472" height="265" />[/caption]</p>
+<p><figure><img class="size-full wp-image-14" title="studio_overlay" src="/blog/wp-content/uploads/2009/08/studio_overlay.png" alt="SUSE Studio Overlay Files tab" width="472" height="265" /><figcaption>SUSE Studio Overlay Files tab</figcaption></figure></p>
 <ul>
 <li>/etc/hosts - points dev.openaustralia.org to the local machine so you can use Firefox to look at the dev site</li>
 <li>/etc/php5/apache2/php.ini - set short_open_tag = On</li>
