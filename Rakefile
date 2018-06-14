@@ -3,7 +3,7 @@ require 'html-proofer'
 task default: :test
 
 task :test do
-  sh "bundle exec jekyll build"
+  sh 'bundle exec jekyll build'
   options = {
     assume_extension: true,
     disable_external: true,
@@ -12,5 +12,5 @@ task :test do
     check_img_http: true,
     check_opengraph: true
   }
-  HTMLProofer.check_directory("./_site", options).run
+  HTMLProofer.check_directory('./_site', options).run
 end
