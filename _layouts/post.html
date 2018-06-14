@@ -32,7 +32,7 @@ layout: default
               by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ comment.author }}</span></span>
             </p>
           </header>
-          <p>{{ comment.content }}</p>
+          <p>{{ comment.content | markdownify }}</p>
         </article>
       {%- endfor -%}
     </section>
