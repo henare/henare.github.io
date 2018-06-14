@@ -46,7 +46,7 @@ The important change was to set the wheel emulation's button to **2**, not **4**
 
 ## Update:
 
-This original method <a href="http://www.henaredegan.com/blog/2010/10/11/trackpoint-scrolling-in-ubuntu-10-10/comment-page-1/#comment-218">didn't survive a power-cycle</a> but I found adding this file to `/usr/share/X11/xorg.conf.d/20-thinkpad.conf` will work:
+This original method didn't survive a power-cycle but I found adding this file to `/usr/share/X11/xorg.conf.d/20-thinkpad.conf` will work:
 
 ```
 Section "InputClass"
