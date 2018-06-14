@@ -24,3 +24,4 @@ end
 
 gem "rake"
 gem "html-proofer"
+gem "rubocop"
