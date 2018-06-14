@@ -1,6 +1,7 @@
 require 'html-proofer'
+require 'rubocop/rake_task'
 
-task default: :test
+task default: %i[test rubocop]
 
 task :test do
   sh 'bundle exec jekyll build'
@@ -14,3 +15,5 @@ task :test do
   }
   HTMLProofer.check_directory('./_site', options).run
 end
+
+RuboCop::RakeTask.new
