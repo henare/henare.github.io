@@ -29,7 +29,14 @@ layout: default
               <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                 {{ comment.date | date: date_format }}
               </time>
-              by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ comment.author }}</span></span>
+              by
+              <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">
+                {% if comment.author_url %}
+                  <a href="{{ comment.author_url }}" rel="external nofollow">{{ comment.author }}</a>
+                {% else %}
+                  {{ comment.author }}
+                {% endif %}
+              </span></span>
             </p>
           </header>
           <div class="post-content e-content" itemprop="articleBody">
