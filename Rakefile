@@ -1,9 +1,10 @@
 require 'html-proofer'
 require 'rubocop/rake_task'
 
-task default: %i[test rubocop]
+task default: %i[html_proofer rubocop]
 
-task :test do
+desc 'Run HTMLProofer checks against the generated Jekyll site'
+task :html_proofer do
   sh 'bundle exec jekyll build'
   options = {
     assume_extension: true,
