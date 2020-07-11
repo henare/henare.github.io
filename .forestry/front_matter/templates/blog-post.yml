@@ -1,0 +1,58 @@
+---
+label: Blog post
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  default: post
+- type: text
+  name: status
+  label: status
+- type: text
+  name: title
+  label: title
+- type: field_group
+  name: author
+  label: author
+  fields:
+  - type: text
+    name: display_name
+    label: display_name
+  - type: text
+    name: login
+    label: login
+  - type: text
+    name: email
+    label: email
+  - type: text
+    name: url
+    label: url
+- type: text
+  name: author_login
+  label: author_login
+- type: text
+  name: author_url
+  label: author_url
+- type: number
+  name: wordpress_id
+  label: wordpress_id
+- type: text
+  name: wordpress_url
+  label: wordpress_url
+- type: datetime
+  name: date
+  label: date
+- type: datetime
+  name: date_gmt
+  label: date_gmt
+- type: list
+  name: categories
+  label: categories
+- type: list
+  name: tags
+  label: tags
+- type: list
+  name: comments
+  label: comments
